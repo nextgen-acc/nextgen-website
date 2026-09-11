@@ -8,31 +8,47 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <style>
         :root { 
-            --primary: #1b264f;    /* الكحلي الداكن من كلمة NG */
-            --secondary: #273469;  /* درجة كحلي فرعية للتدرجات */
-            --accent: #f26419;     /* اللون البرتقالي المشرق من حرف A */
-            --light: #f8fafc;      /* خلفية الموقع */
-            --dark: #0f172a;       /* لون الخطوط */
+            --primary: #1b264f;    /* الكحلي الداكن من اللوجو */
+            --secondary: #273469;  
+            --accent: #f26419;     /* البرتقالي المشرق */
+            --light: #f8fafc;      
+            --dark: #0f172a;       
         }
         * { box-sizing: border-box; margin: 0; padding: 0; font-family: 'Cairo', sans-serif; }
         body { background-color: var(--light); color: var(--dark); line-height: 1.6; }
         
-        /* هيدر يحتوي على اللوجو */
-        header { background: white; padding: 15px 5%; position: sticky; top: 0; z-index: 1000; box-shadow: 0 4px 15px rgba(0,0,0,0.08); display: flex; justify-content: space-between; align-items: center; border-bottom: 3px solid var(--accent); }
+        /* هيدر يحتوي على لوجو واضح بحجم ممتاز */
+        header { 
+            background: white; 
+            padding: 10px 5%; 
+            position: sticky; 
+            top: 0; 
+            z-index: 1000; 
+            box-shadow: 0 4px 15px rgba(0,0,0,0.08); 
+            display: flex; 
+            justify-content: space-between; 
+            align-items: center; 
+            border-bottom: 3px solid var(--accent); 
+        }
+        
         .logo-box { display: flex; align-items: center; }
-        .logo-box img { height: 75px; width: auto; object-fit: contain; }
+        /* التحكم في حجم اللوجو أعلى الموقع */
+        .logo-box img { 
+            height: 65px; /* ارتفاع اللوجو ليظهر بشكل بارز ونظيف */
+            width: auto; 
+            object-fit: contain; 
+        }
+
         nav ul { display: flex; list-style: none; gap: 20px; }
         nav a { color: var(--primary); text-decoration: none; font-weight: 700; font-size: 16px; }
         nav a:hover { color: var(--accent); }
 
-        /* الواجهة الرئيسية */
         .hero { background: linear-gradient(135deg, var(--primary), var(--secondary)); color: white; padding: 75px 5%; text-align: center; border-bottom: 5px solid var(--accent); }
         .hero h1 { font-size: 34px; margin-bottom: 15px; font-weight: 800; }
         .hero p { font-size: 18px; max-width: 750px; margin: 0 auto 25px; opacity: 0.95; }
         .btn { display: inline-block; background: var(--accent); color: white; padding: 14px 35px; border-radius: 30px; text-decoration: none; font-weight: 700; font-size: 17px; transition: 0.3s; box-shadow: 0 4px 12px rgba(242,100,25,0.3); }
         .btn:hover { background: #d9530f; transform: translateY(-2px); }
 
-        /* قسم من نحن والمحاسب القانوني */
         .about-section { padding: 60px 5%; background: white; text-align: center; border-bottom: 1px solid #e2e8f0; }
         .about-container { max-width: 850px; margin: 0 auto; }
         .about-title { font-size: 28px; color: var(--primary); margin-bottom: 15px; font-weight: 800; }
@@ -45,7 +61,6 @@
         .exp-card h4 { font-size: 18px; color: var(--primary); margin-bottom: 5px; }
         .exp-card p { font-size: 14px; color: #64748b; margin: 0; }
 
-        /* قسم الخدمات */
         .services { padding: 60px 5%; text-align: center; }
         .section-title { font-size: 28px; color: var(--primary); margin-bottom: 35px; font-weight: 800; }
         .services-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 25px; }
@@ -54,7 +69,6 @@
         .card h3 { margin-bottom: 12px; color: var(--primary); font-size: 20px; }
         .card p { color: #475569; font-size: 15px; }
 
-        /* الفوتر وبيانات التواصل */
         footer { background: var(--primary); color: white; text-align: center; padding: 35px 5%; border-top: 4px solid var(--accent); }
         .contact-info { display: flex; justify-content: center; gap: 30px; flex-wrap: wrap; margin-bottom: 20px; font-size: 16px; }
         .contact-item { display: flex; align-items: center; gap: 10px; }
@@ -66,9 +80,9 @@
 </head>
 <body>
 
-    <!-- الهيدر واللوجو -->
     <header>
         <div class="logo-box">
+            <!-- استدعاء اللوجو الذي قمت برفه على المستودع -->
             <img src="logo.jpg" alt="Next Gen Accounting Logo">
         </div>
         <nav>
@@ -80,14 +94,12 @@
         </nav>
     </header>
 
-    <!-- الواجهة الرئيسية -->
     <section class="hero" id="home">
         <h1>Next Gen Accounting (NGA)</h1>
         <p>حلول محاسبية وضريبية متكاملة وإجراءات تأسيس الشركات بأعلى جودة لحماية ملف شركتك ومساعدتك على التوسع بأمان.</p>
         <a href="https://wa.me/201147274780" class="btn" target="_blank"><i class="fab fa-whatsapp"></i> احصل على استشارة فورية</a>
     </section>
 
-    <!-- قسم من نحن والخبرة والمحاسب القانوني -->
     <section class="about-section" id="about">
         <div class="about-container">
             <h2 class="about-title">من نحن</h2>
@@ -116,7 +128,6 @@
         </div>
     </section>
 
-    <!-- قسم الخدمات -->
     <section class="services" id="services">
         <h2 class="section-title">خدماتنا المعتمدة</h2>
         <div class="services-grid">
@@ -138,10 +149,8 @@
         </div>
     </section>
 
-    <!-- زر واتساب العائم -->
     <a href="https://wa.me/201147274780" class="whatsapp-float" target="_blank"><i class="fab fa-whatsapp"></i></a>
 
-    <!-- الفوتر وبيانات التواصل -->
     <footer>
         <div class="contact-info">
             <div class="contact-item">
